@@ -100,7 +100,22 @@ namespace RHH
 
         private void departamentosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void nuevoDepartamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             new NuevoDepartamento().Show();
+        }
+
+        private void nuevaAreaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new NuevaArea().Show();
+        }
+
+        private void nuevaDireccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new DireccionDGV().Show();
         }
     }
 }

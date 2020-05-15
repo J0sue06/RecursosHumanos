@@ -33,6 +33,8 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.label47 = new System.Windows.Forms.Label();
             this.cArea = new System.Windows.Forms.TextBox();
             this.cDepartamento = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
@@ -264,6 +266,8 @@
             // 
             // groupBox11
             // 
+            this.groupBox11.Controls.Add(this.txtDireccion);
+            this.groupBox11.Controls.Add(this.label47);
             this.groupBox11.Controls.Add(this.cArea);
             this.groupBox11.Controls.Add(this.cDepartamento);
             this.groupBox11.Controls.Add(this.label46);
@@ -273,10 +277,27 @@
             this.groupBox11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox11.Location = new System.Drawing.Point(836, 210);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(262, 131);
+            this.groupBox11.Size = new System.Drawing.Size(262, 163);
             this.groupBox11.TabIndex = 4;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Detalles del area de trabajo";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(120, 130);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(135, 23);
+            this.txtDireccion.TabIndex = 41;
+            this.txtDireccion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtDireccion_MouseClick);
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(46, 133);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(70, 16);
+            this.label47.TabIndex = 40;
+            this.label47.Text = "Direccion";
             // 
             // cArea
             // 
@@ -285,6 +306,7 @@
             this.cArea.Size = new System.Drawing.Size(135, 23);
             this.cArea.TabIndex = 39;
             this.cArea.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cArea_MouseClick);
+            this.cArea.TextChanged += new System.EventHandler(this.cArea_TextChanged);
             // 
             // cDepartamento
             // 
@@ -1783,5 +1805,7 @@
         private System.Windows.Forms.Label label46;
         public System.Windows.Forms.TextBox cDepartamento;
         public System.Windows.Forms.TextBox cArea;
+        public System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.Label label47;
     }
 }

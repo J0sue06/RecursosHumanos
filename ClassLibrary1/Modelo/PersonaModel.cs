@@ -12,6 +12,10 @@ namespace ClassLibrary1.Modelo
     public class PersonaModel
     {
         public int IdUsuario { get; set; }
+        public static int Id_departamento { get; set; }
+        public static string CodigoDepartamento { get; set; }
+        public static string CodigoArea { get; set; }
+        public static string CodigoDireccion { get; set; }
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
@@ -41,13 +45,15 @@ namespace ClassLibrary1.Modelo
         public SqlConnection con = new BasedeDatos().conectar();
 
         public void InsertarPersona()
-        {           
-
+        {
+            string Codigo_final = CodigoDepartamento + CodigoArea + CodigoDireccion;
             try
             {                
                 SqlCommand cmd = new SqlCommand("SP_insertar_informacionPersona", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
+                cmd.Parameters.Add(new SqlParameter("@codigo", Codigo_final));
+                cmd.Parameters.Add(new SqlParameter("@id_departamento", Id_departamento));
                 cmd.Parameters.Add(new SqlParameter("@nombre", Nombre));
                 cmd.Parameters.Add(new SqlParameter("@apellido", Apellido));
                 cmd.Parameters.Add(new SqlParameter("@cedula", Cedula));

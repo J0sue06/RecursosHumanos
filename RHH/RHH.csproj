@@ -68,11 +68,25 @@
       <DependentUpon>Consulta.cs</DependentUpon>
     </Compile>
     <Compile Include="Contrato.cs" />
+    <Compile Include="Contrato2.cs" />
+    <Compile Include="Contrato3.cs" />
+    <Compile Include="Datos Direccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datos Direccion.Designer.cs">
+      <DependentUpon>Datos Direccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="DepartamentoDGV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DepartamentoDGV.Designer.cs">
       <DependentUpon>DepartamentoDGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DireccionDGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DireccionDGV.Designer.cs">
+      <DependentUpon>DireccionDGV.cs</DependentUpon>
     </Compile>
     <Compile Include="HacerReporte.cs">
       <SubType>Form</SubType>
@@ -112,6 +126,24 @@
     <Compile Include="MenuReportes.Designer.cs">
       <DependentUpon>MenuReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="NuevaArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaArea.Designer.cs">
+      <DependentUpon>NuevaArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevaAreaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaAreaForm.Designer.cs">
+      <DependentUpon>NuevaAreaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevaDireccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaDireccion.Designer.cs">
+      <DependentUpon>NuevaDireccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="NuevoDepartamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +176,7 @@
       <DependentUpon>ReporteRH.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UltimoID.cs" />
     <Compile Include="Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,8 +189,14 @@
     <EmbeddedResource Include="Consulta.resx">
       <DependentUpon>Consulta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Datos Direccion.resx">
+      <DependentUpon>Datos Direccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DepartamentoDGV.resx">
       <DependentUpon>DepartamentoDGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DireccionDGV.resx">
+      <DependentUpon>DireccionDGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HacerReporte.resx">
       <DependentUpon>HacerReporte.cs</DependentUpon>
@@ -176,6 +215,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuReportes.resx">
       <DependentUpon>MenuReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevaArea.resx">
+      <DependentUpon>NuevaArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevaAreaForm.resx">
+      <DependentUpon>NuevaAreaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevaDireccion.resx">
+      <DependentUpon>NuevaDireccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoDepartamento.resx">
       <DependentUpon>NuevoDepartamento.cs</DependentUpon>

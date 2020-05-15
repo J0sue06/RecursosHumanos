@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace RHH
 {
-    public interface Contrato
+    public interface Contrato2
     {
-        void Departamento(string texto);        
+       void Area(string texto);
     }
 }

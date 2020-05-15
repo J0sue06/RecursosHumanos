@@ -11,7 +11,7 @@ using ClassLibrary1.Modelo;
 
 namespace RHH
 {
-    public partial class Registro : Form, Contrato
+    public partial class Registro : Form, Contrato,Contrato2,Contrato3
     {
         PersonaModel _personasModel = new PersonaModel();
         DatosAcademicos _datosAcademicos = new DatosAcademicos();
@@ -936,15 +936,33 @@ namespace RHH
         }
         public void Area(string texto)
         {
-            cDepartamento.Text = texto;
+            cArea.Text = texto;
+        }
+        public void Direccion(string texto)
+        {
+            txtDireccion.Text = texto;
         }
 
         private void cArea_MouseClick(object sender, MouseEventArgs e)
         {
-            new AreaDGV().Show();
+            AreaDGV a = new AreaDGV();
+            a.contrato2 = this;
+            a.Show();
         }
 
         private void cDepartamento_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void txtDireccion_MouseClick(object sender, MouseEventArgs e)
+        {
+            Datos_Direccion d = new Datos_Direccion();
+            d.contrato3 = this;
+            d.Show();
+        }
+
+        private void cArea_TextChanged(object sender, EventArgs e)
         {
 
         }

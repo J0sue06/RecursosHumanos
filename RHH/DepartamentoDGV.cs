@@ -36,7 +36,11 @@ namespace RHH
 
             Departamento.id_departamento = int.Parse(dgvDepartamento.CurrentRow.Cells[0].Value.ToString());
 
-            
+            PersonaModel.Id_departamento = int.Parse(dgvDepartamento.CurrentRow.Cells[0].Value.ToString());
+
+            PersonaModel.CodigoDepartamento = dgvDepartamento.CurrentRow.Cells[1].Value.ToString();
+
+
         }
     }
 }

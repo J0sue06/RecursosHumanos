@@ -42,6 +42,9 @@
             this.configuracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.departamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoDepartamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevaAreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevaDireccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -157,10 +160,35 @@
             // 
             // departamentosToolStripMenuItem
             // 
+            this.departamentosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevoDepartamentoToolStripMenuItem,
+            this.nuevaAreaToolStripMenuItem,
+            this.nuevaDireccionToolStripMenuItem});
             this.departamentosToolStripMenuItem.Name = "departamentosToolStripMenuItem";
             this.departamentosToolStripMenuItem.Size = new System.Drawing.Size(192, 24);
             this.departamentosToolStripMenuItem.Text = "Departamentos";
             this.departamentosToolStripMenuItem.Click += new System.EventHandler(this.departamentosToolStripMenuItem_Click);
+            // 
+            // nuevoDepartamentoToolStripMenuItem
+            // 
+            this.nuevoDepartamentoToolStripMenuItem.Name = "nuevoDepartamentoToolStripMenuItem";
+            this.nuevoDepartamentoToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
+            this.nuevoDepartamentoToolStripMenuItem.Text = "Nuevo Departamento";
+            this.nuevoDepartamentoToolStripMenuItem.Click += new System.EventHandler(this.nuevoDepartamentoToolStripMenuItem_Click);
+            // 
+            // nuevaAreaToolStripMenuItem
+            // 
+            this.nuevaAreaToolStripMenuItem.Name = "nuevaAreaToolStripMenuItem";
+            this.nuevaAreaToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
+            this.nuevaAreaToolStripMenuItem.Text = "Nueva Area";
+            this.nuevaAreaToolStripMenuItem.Click += new System.EventHandler(this.nuevaAreaToolStripMenuItem_Click);
+            // 
+            // nuevaDireccionToolStripMenuItem
+            // 
+            this.nuevaDireccionToolStripMenuItem.Name = "nuevaDireccionToolStripMenuItem";
+            this.nuevaDireccionToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
+            this.nuevaDireccionToolStripMenuItem.Text = "Nueva Direccion";
+            this.nuevaDireccionToolStripMenuItem.Click += new System.EventHandler(this.nuevaDireccionToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -230,6 +258,9 @@
         private System.Windows.Forms.ToolStripMenuItem reporteDeMasDeUnaPersonaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem departamentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nuevoDepartamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nuevaAreaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nuevaDireccionToolStripMenuItem;
     }
 }
 

@@ -13,23 +13,25 @@ namespace RHH
 {
     public partial class AreaDGV : Form
     {
-        public Contrato contrato { get; set; }
+        public Contrato2 contrato2 { get; set; }
         public AreaDGV()
         {
             InitializeComponent();
-        }
-
-        private void dgvArea_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            contrato.Departamento(dgvArea.CurrentRow.Cells[2].Value.ToString());
-            
-        }
+        }        
 
         private void AreaDGV_Load(object sender, EventArgs e)
         {
-            dgvArea.DataSource = new Departamento().DatosArea();
-            dgvArea.Columns[0].Visible = false;
-            dgvArea.Columns[1].Visible = false;
+            dgvArea.DataSource = new Departamento().DatosDireccion();
+            //dgvArea.Columns[0].Visible = false;
+            //dgvArea.Columns[1].Visible = false;
+        }
+
+        private void dgvArea_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {             
+            contrato2.Area(dgvArea.CurrentRow.Cells[2].Value.ToString());
+
+            PersonaModel.CodigoArea = dgvArea.CurrentRow.Cells[3].Value.ToString();
+            Departamento.Id_direccion = int.Parse(dgvArea.CurrentRow.Cells[0].Value.ToString());
         }
     }
 }
