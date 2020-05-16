@@ -86,7 +86,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.txtDependiente = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.txtIngreso = new System.Windows.Forms.DateTimePicker();
             this.btnImagen = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -121,6 +120,14 @@
             this.btnM = new System.Windows.Forms.Button();
             this.txtIdAcademicos = new System.Windows.Forms.TextBox();
             this.txtIdFamiliares = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.txtIngreso = new System.Windows.Forms.TextBox();
+            this.txtSalario = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pImagenInfo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -606,20 +613,10 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(401, 27);
+            this.txtID.Location = new System.Drawing.Point(613, 9);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(36, 20);
             this.txtID.TabIndex = 59;
-            // 
-            // txtIngreso
-            // 
-            this.txtIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtIngreso.Location = new System.Drawing.Point(1099, 249);
-            this.txtIngreso.Name = "txtIngreso";
-            this.txtIngreso.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtIngreso.Size = new System.Drawing.Size(153, 22);
-            this.txtIngreso.TabIndex = 60;
             // 
             // btnImagen
             // 
@@ -912,7 +909,7 @@
             // 
             this.btnG.BackColor = System.Drawing.Color.LawnGreen;
             this.btnG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnG.Location = new System.Drawing.Point(1137, 500);
+            this.btnG.Location = new System.Drawing.Point(1131, 523);
             this.btnG.Name = "btnG";
             this.btnG.Size = new System.Drawing.Size(121, 32);
             this.btnG.TabIndex = 67;
@@ -934,23 +931,99 @@
             // 
             // txtIdAcademicos
             // 
-            this.txtIdAcademicos.Location = new System.Drawing.Point(478, 27);
+            this.txtIdAcademicos.Location = new System.Drawing.Point(490, 16);
             this.txtIdAcademicos.Name = "txtIdAcademicos";
             this.txtIdAcademicos.Size = new System.Drawing.Size(36, 20);
             this.txtIdAcademicos.TabIndex = 70;
             // 
             // txtIdFamiliares
             // 
-            this.txtIdFamiliares.Location = new System.Drawing.Point(345, 27);
+            this.txtIdFamiliares.Location = new System.Drawing.Point(353, 5);
             this.txtIdFamiliares.Name = "txtIdFamiliares";
             this.txtIdFamiliares.Size = new System.Drawing.Size(36, 20);
             this.txtIdFamiliares.TabIndex = 71;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(324, 43);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(40, 13);
+            this.label39.TabIndex = 72;
+            this.label39.Text = "Codigo";
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(372, 43);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(39, 13);
+            this.lblCodigo.TabIndex = 73;
+            this.lblCodigo.Text = "codigo";
+            // 
+            // txtIngreso
+            // 
+            this.txtIngreso.Location = new System.Drawing.Point(1103, 249);
+            this.txtIngreso.Name = "txtIngreso";
+            this.txtIngreso.Size = new System.Drawing.Size(100, 20);
+            this.txtIngreso.TabIndex = 74;
+            // 
+            // txtSalario
+            // 
+            this.txtSalario.Location = new System.Drawing.Point(1099, 36);
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Size = new System.Drawing.Size(104, 20);
+            this.txtSalario.TabIndex = 75;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(1054, 39);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(39, 13);
+            this.label40.TabIndex = 76;
+            this.label40.Text = "Salario";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(294, 12);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(53, 13);
+            this.label41.TabIndex = 77;
+            this.label41.Text = "Familiares";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(589, 12);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(18, 13);
+            this.label42.TabIndex = 78;
+            this.label42.Text = "ID";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(419, 19);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(65, 13);
+            this.label43.TabIndex = 79;
+            this.label43.Text = "Academicos";
             // 
             // Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1270, 594);
+            this.Controls.Add(this.label43);
+            this.Controls.Add(this.label42);
+            this.Controls.Add(this.label41);
+            this.Controls.Add(this.label40);
+            this.Controls.Add(this.txtSalario);
+            this.Controls.Add(this.txtIngreso);
+            this.Controls.Add(this.lblCodigo);
+            this.Controls.Add(this.label39);
             this.Controls.Add(this.txtIdFamiliares);
             this.Controls.Add(this.txtIdAcademicos);
             this.Controls.Add(this.btnM);
@@ -961,7 +1034,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnImagen);
-            this.Controls.Add(this.txtIngreso);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.txtDependiente);
@@ -1088,7 +1160,6 @@
         private System.Windows.Forms.Label label26;
         public System.Windows.Forms.TextBox txtDependiente;
         public System.Windows.Forms.TextBox txtID;
-        public System.Windows.Forms.DateTimePicker txtIngreso;
         private System.Windows.Forms.Button btnImagen;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -1123,5 +1194,13 @@
         public System.Windows.Forms.DateTimePicker txtTermino;
         public System.Windows.Forms.TextBox txtIdAcademicos;
         public System.Windows.Forms.TextBox txtIdFamiliares;
+        private System.Windows.Forms.Label label39;
+        public System.Windows.Forms.Label lblCodigo;
+        public System.Windows.Forms.TextBox txtIngreso;
+        public System.Windows.Forms.TextBox txtSalario;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
     }
 }

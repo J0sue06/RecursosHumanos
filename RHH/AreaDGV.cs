@@ -17,13 +17,13 @@ namespace RHH
         public AreaDGV()
         {
             InitializeComponent();
-        }        
+        }
 
         private void AreaDGV_Load(object sender, EventArgs e)
         {
-            dgvArea.DataSource = new Departamento().DatosDireccion();
-            //dgvArea.Columns[0].Visible = false;
-            //dgvArea.Columns[1].Visible = false;
+            dgvArea.DataSource = new Departamento().DatosArea();
+            dgvArea.Columns[0].Visible = false;
+            dgvArea.Columns[1].Visible = false;
         }
 
         private void dgvArea_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

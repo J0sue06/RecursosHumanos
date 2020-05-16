@@ -68,7 +68,7 @@ namespace RHH
             txtCiudad.Enabled = false;
             txtSangre.Enabled = false;
             txtNumCasa.Enabled = false;
-            txtUltimoAscenso.Enabled = false;            
+            txtUltimoAscenso.Enabled = false;
             txtID.Visible = false;
             txtIdAcademicos.Visible = false;
             txtIdFamiliares.Visible = false;
@@ -186,7 +186,7 @@ namespace RHH
             _personaModel.Condicion = txtCondicion.Text;
             _personaModel.Rango = txtRango.Text;
             _personaModel.Institucion = txtInstitucion.Text;
-            _personaModel.fechaIngreso = txtIngreso.Value;
+            _personaModel.fechaIngreso = txtIngreso.Text;
             _personaModel.ultimoAscenso = txtUltimoAscenso.Text;
             _personaModel.Sangre = txtSangre.Text;
             _personaModel.Antecedentes = txtAntecedentes.Text;
@@ -282,11 +282,12 @@ namespace RHH
             _personaModel.Condicion = txtCondicion.Text;
             _personaModel.Rango = txtRango.Text;
             _personaModel.Institucion = txtInstitucion.Text;
-            _personaModel.fechaIngreso = txtIngreso.Value;
+            _personaModel.fechaIngreso = txtIngreso.Text;
             _personaModel.ultimoAscenso = txtUltimoAscenso.Text;
             _personaModel.Sangre = txtSangre.Text;
             _personaModel.Antecedentes = txtAntecedentes.Text;
             _personaModel.numeroCasa = txtNumCasa.Text;
+            _personaModel.Salario = txtSalario.Text;
 
             //Guardar Imagen -----------------------
             System.IO.MemoryStream ms = new System.IO.MemoryStream();

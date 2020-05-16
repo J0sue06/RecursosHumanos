@@ -75,3 +75,13 @@ C:\Users\c5iadmin\Desktop\3.0\ClassLibrary1\obj\Debug\Datos.csproj.CoreCompileIn
 C:\Users\c5iadmin\Desktop\3.0\ClassLibrary1\obj\Debug\Datos.csproj.CopyComplete
 C:\Users\c5iadmin\Desktop\3.0\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 C:\Users\c5iadmin\Desktop\3.0\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\c5iadmin\Desktop\3.5\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\c5iadmin\Desktop\3.5\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\c5iadmin\Desktop\3.5\ClassLibrary1\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\c5iadmin\Desktop\3.5\ClassLibrary1\bin\Debug\System.Data.SqlClient.dll
+C:\Users\c5iadmin\Desktop\3.5\ClassLibrary1\bin\Debug\System.Data.SqlClient.xml
+C:\Users\c5iadmin\Desktop\3.5\ClassLibrary1\obj\Debug\Datos.csprojAssemblyReference.cache
+C:\Users\c5iadmin\Desktop\3.5\ClassLibrary1\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\c5iadmin\Desktop\3.5\ClassLibrary1\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\c5iadmin\Desktop\3.5\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\c5iadmin\Desktop\3.5\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

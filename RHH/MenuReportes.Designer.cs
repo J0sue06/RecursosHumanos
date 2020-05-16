@@ -36,8 +36,8 @@
             this.ComboDepartamento = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkDepartamento = new System.Windows.Forms.CheckBox();
             this.Fecha = new System.Windows.Forms.CheckBox();
-            this.Departamento = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +54,7 @@
             // 
             // Desde
             // 
+            this.Desde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Desde.Location = new System.Drawing.Point(82, 140);
             this.Desde.Name = "Desde";
             this.Desde.Size = new System.Drawing.Size(177, 20);
@@ -81,6 +82,7 @@
             // 
             // Hasta
             // 
+            this.Hasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Hasta.Location = new System.Drawing.Point(331, 141);
             this.Hasta.Name = "Hasta";
             this.Hasta.Size = new System.Drawing.Size(165, 20);
@@ -89,12 +91,6 @@
             // ComboDepartamento
             // 
             this.ComboDepartamento.FormattingEnabled = true;
-            this.ComboDepartamento.Items.AddRange(new object[] {
-            "Todos",
-            "Informatica",
-            "Video Vigilancia",
-            "Inteligencia",
-            "Cyber Seguridad"});
             this.ComboDepartamento.Location = new System.Drawing.Point(634, 138);
             this.ComboDepartamento.Name = "ComboDepartamento";
             this.ComboDepartamento.Size = new System.Drawing.Size(99, 21);
@@ -112,7 +108,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.Departamento);
+            this.groupBox1.Controls.Add(this.chkDepartamento);
             this.groupBox1.Controls.Add(this.Fecha);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(23, 12);
@@ -121,6 +117,19 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opciones de Filtro";
+            // 
+            // chkDepartamento
+            // 
+            this.chkDepartamento.AutoSize = true;
+            this.chkDepartamento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkDepartamento.Location = new System.Drawing.Point(18, 51);
+            this.chkDepartamento.Name = "chkDepartamento";
+            this.chkDepartamento.Size = new System.Drawing.Size(144, 20);
+            this.chkDepartamento.TabIndex = 9;
+            this.chkDepartamento.Text = "Por Departamento";
+            this.chkDepartamento.UseVisualStyleBackColor = true;
+            this.chkDepartamento.CheckedChanged += new System.EventHandler(this.Departamento_CheckedChanged);
+            this.chkDepartamento.Click += new System.EventHandler(this.Departamento_Click);
             // 
             // Fecha
             // 
@@ -135,19 +144,6 @@
             this.Fecha.CheckedChanged += new System.EventHandler(this.Fecha_CheckedChanged);
             this.Fecha.Click += new System.EventHandler(this.Fecha_Click);
             // 
-            // Departamento
-            // 
-            this.Departamento.AutoSize = true;
-            this.Departamento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Departamento.Location = new System.Drawing.Point(18, 51);
-            this.Departamento.Name = "Departamento";
-            this.Departamento.Size = new System.Drawing.Size(144, 20);
-            this.Departamento.TabIndex = 9;
-            this.Departamento.Text = "Por Departamento";
-            this.Departamento.UseVisualStyleBackColor = true;
-            this.Departamento.CheckedChanged += new System.EventHandler(this.Departamento_CheckedChanged);
-            this.Departamento.Click += new System.EventHandler(this.Departamento_Click);
-            // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -158,6 +154,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Obtener Reporte";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MenuReportes
             // 
@@ -196,7 +193,7 @@
         private System.Windows.Forms.ComboBox ComboDepartamento;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox Departamento;
+        private System.Windows.Forms.CheckBox chkDepartamento;
         private System.Windows.Forms.CheckBox Fecha;
         private System.Windows.Forms.Button button1;
     }

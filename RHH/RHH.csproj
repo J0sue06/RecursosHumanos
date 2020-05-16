@@ -176,6 +176,18 @@
       <DependentUpon>ReporteRH.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ReporteRHVariasP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteRHVariasP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteRHVariasP2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteRHVariasP2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UltimoID.cs" />
     <Compile Include="Usuarios.cs">
       <SubType>Form</SubType>
@@ -249,6 +261,14 @@
     <EmbeddedResource Include="ReporteRH.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteRH.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteRHVariasP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteRHVariasP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteRHVariasP2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteRHVariasP2.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>

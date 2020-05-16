@@ -64,12 +64,14 @@ namespace RHH
             _personasModel.Telefono_Movil = txtTelMovil.Text;
             _personasModel.Dependiente = txtDependiente.Text;
             _personasModel.Sexo = txtSexo.Text;
+            _personasModel.Salario = txtSalario.Text;
+
             if (txtCondicion.Text == "Civil")
             {
                 _personasModel.Condicion = txtCondicion.Text;
                 _personasModel.Rango = "No Aplica";
                 _personasModel.Institucion = "No Aplica";
-                _personasModel.fechaIngreso = Convert.ToDateTime(txtIngreso.Text);
+                _personasModel.fechaIngreso = "No Aplica";
                 _personasModel.ultimoAscenso = "No Aplica";
             }
             if (txtCondicion.Text == "Militar")
@@ -77,7 +79,7 @@ namespace RHH
                 _personasModel.Condicion = txtCondicion.Text;
                 _personasModel.Rango = txtRango.Text;
                 _personasModel.Institucion = txtInstitucion.Text;
-                _personasModel.fechaIngreso = Convert.ToDateTime(txtIngreso.Text);
+                _personasModel.fechaIngreso = txtIngreso.Text;
                 _personasModel.ultimoAscenso = TxtAscenso.Text;
             }
             if (txtCondicion.Text == "Asimilado")
@@ -85,7 +87,7 @@ namespace RHH
                 _personasModel.Condicion = txtCondicion.Text;
                 _personasModel.Rango = "No Aplica";
                 _personasModel.Institucion = txtInstitucion.Text;
-                _personasModel.fechaIngreso = Convert.ToDateTime(txtIngreso.Text);
+                _personasModel.fechaIngreso = txtIngreso.Text;
                 _personasModel.ultimoAscenso = "No Aplica";
             }
 
@@ -321,21 +323,22 @@ namespace RHH
                 var resultado = _datosFamiliares.InsertarDatosFamiliares();
 
                 _datosFamiliares.ObtenerIdFamiliares(txtNombrePadre.Text);
+               
 
+                    foreach (DataGridViewRow item in DGVHijo.Rows)
+                    {
+                        _datosFamiliares.InserarHijo(new object[] { item.Cells[0].Value, item.Cells[1].Value });
+                    }
 
+                    if (resultado == "OK")
+                    {
+                        MessageBox.Show("Datos Guardados Correctamente!", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        this.Close();
+                        new Inicio().Show();
+                    }
+                    else { MessageBox.Show("Error al insertar Datos Familiares!", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
-                foreach (DataGridViewRow item in DGVHijo.Rows)
-                {
-                    _datosFamiliares.InserarHijo(new object[] { item.Cells[0].Value, item.Cells[1].Value });
-                }
-
-                if (resultado == "OK")
-                {
-                    MessageBox.Show("Datos Guardados Correctamente!", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    this.Close();
-                    new Inicio().Show();
-                }
-                else { MessageBox.Show("Error al insertar Datos Familiares!", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                
             }
             
         }

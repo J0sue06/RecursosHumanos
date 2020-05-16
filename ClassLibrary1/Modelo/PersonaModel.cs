@@ -35,10 +35,11 @@ namespace ClassLibrary1.Modelo
         public string Condicion { get; set; }
         public string Rango { get; set; }
         public string Institucion { get; set; }
-        public DateTime? fechaIngreso { get; set; }
+        public string fechaIngreso { get; set; }
         public string ultimoAscenso { get; set; }
         public string Antecedentes { get; set; }
         public string Sangre { get; set; }
+        public string Salario { get; set; }
         public byte[] Imagen { get; set; }
         public int Resultado { get; set; }
         
@@ -78,6 +79,8 @@ namespace ClassLibrary1.Modelo
                 cmd.Parameters.Add(new SqlParameter("@grupoSanguineo", Sangre));
 
                 cmd.Parameters.Add("@foto", SqlDbType.Image).Value = Imagen;
+
+                cmd.Parameters.Add(new SqlParameter("@salario", Salario));
 
                 con.Close();
                 con.Open();
@@ -172,6 +175,7 @@ namespace ClassLibrary1.Modelo
                 cmd.Parameters.Add(new SqlParameter("@antecedentes", Antecedentes));
                 cmd.Parameters.Add(new SqlParameter("@sangre", Sangre));                
                 cmd.Parameters.Add("@imagen", SqlDbType.Image).Value = Imagen;
+                cmd.Parameters.Add(new SqlParameter("@salario", Salario));
 
                 con.Close();
                 con.Open();

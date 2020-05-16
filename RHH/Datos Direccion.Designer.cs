@@ -35,6 +35,11 @@
             // 
             // dgvDireccion
             // 
+            this.dgvDireccion.AllowUserToAddRows = false;
+            this.dgvDireccion.AllowUserToDeleteRows = false;
+            this.dgvDireccion.AllowUserToResizeColumns = false;
+            this.dgvDireccion.AllowUserToResizeRows = false;
+            this.dgvDireccion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDireccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDireccion.Location = new System.Drawing.Point(12, 75);
             this.dgvDireccion.Name = "dgvDireccion";
@@ -62,6 +67,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Datos_Direccion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos_Direccion";
             this.Load += new System.EventHandler(this.Datos_Direccion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDireccion)).EndInit();
