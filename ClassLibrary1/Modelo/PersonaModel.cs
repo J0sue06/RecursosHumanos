@@ -40,6 +40,7 @@ namespace ClassLibrary1.Modelo
         public string Antecedentes { get; set; }
         public string Sangre { get; set; }
         public string Salario { get; set; }
+        public int Estado = 0;
         public byte[] Imagen { get; set; }
         public int Resultado { get; set; }
         
@@ -81,6 +82,7 @@ namespace ClassLibrary1.Modelo
                 cmd.Parameters.Add("@foto", SqlDbType.Image).Value = Imagen;
 
                 cmd.Parameters.Add(new SqlParameter("@salario", Salario));
+                cmd.Parameters.Add(new SqlParameter("@estado", Estado));
 
                 con.Close();
                 con.Open();

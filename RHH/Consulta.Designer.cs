@@ -93,6 +93,7 @@
             this.dgListado.Name = "dgListado";
             this.dgListado.Size = new System.Drawing.Size(1253, 293);
             this.dgListado.TabIndex = 13;
+            this.dgListado.DataSourceChanged += new System.EventHandler(this.dgListado_DataSourceChanged);
             this.dgListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListado_CellContentClick);
             this.dgListado.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgListado_CellMouseClick);
             // 

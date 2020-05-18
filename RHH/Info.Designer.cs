@@ -125,9 +125,9 @@
             this.txtIngreso = new System.Windows.Forms.TextBox();
             this.txtSalario = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
+            this.lblFamiliares = new System.Windows.Forms.Label();
+            this.lblPersona = new System.Windows.Forms.Label();
+            this.lblAcademicos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pImagenInfo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -613,7 +613,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(613, 9);
+            this.txtID.Location = new System.Drawing.Point(617, 9);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(36, 20);
             this.txtID.TabIndex = 59;
@@ -901,7 +901,7 @@
             this.btnE.Name = "btnE";
             this.btnE.Size = new System.Drawing.Size(121, 32);
             this.btnE.TabIndex = 66;
-            this.btnE.Text = "Eliminar ";
+            this.btnE.Text = "Dar Debaja";
             this.btnE.UseVisualStyleBackColor = false;
             this.btnE.Click += new System.EventHandler(this.btnE_Click);
             // 
@@ -984,41 +984,41 @@
             this.label40.TabIndex = 76;
             this.label40.Text = "Salario";
             // 
-            // label41
+            // lblFamiliares
             // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(294, 12);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(53, 13);
-            this.label41.TabIndex = 77;
-            this.label41.Text = "Familiares";
+            this.lblFamiliares.AutoSize = true;
+            this.lblFamiliares.Location = new System.Drawing.Point(294, 12);
+            this.lblFamiliares.Name = "lblFamiliares";
+            this.lblFamiliares.Size = new System.Drawing.Size(53, 13);
+            this.lblFamiliares.TabIndex = 77;
+            this.lblFamiliares.Text = "Familiares";
             // 
-            // label42
+            // lblPersona
             // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(589, 12);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(18, 13);
-            this.label42.TabIndex = 78;
-            this.label42.Text = "ID";
+            this.lblPersona.AutoSize = true;
+            this.lblPersona.Location = new System.Drawing.Point(555, 12);
+            this.lblPersona.Name = "lblPersona";
+            this.lblPersona.Size = new System.Drawing.Size(60, 13);
+            this.lblPersona.TabIndex = 78;
+            this.lblPersona.Text = "Id_persona";
             // 
-            // label43
+            // lblAcademicos
             // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(419, 19);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(65, 13);
-            this.label43.TabIndex = 79;
-            this.label43.Text = "Academicos";
+            this.lblAcademicos.AutoSize = true;
+            this.lblAcademicos.Location = new System.Drawing.Point(419, 19);
+            this.lblAcademicos.Name = "lblAcademicos";
+            this.lblAcademicos.Size = new System.Drawing.Size(65, 13);
+            this.lblAcademicos.TabIndex = 79;
+            this.lblAcademicos.Text = "Academicos";
             // 
             // Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1270, 594);
-            this.Controls.Add(this.label43);
-            this.Controls.Add(this.label42);
-            this.Controls.Add(this.label41);
+            this.Controls.Add(this.lblAcademicos);
+            this.Controls.Add(this.lblPersona);
+            this.Controls.Add(this.lblFamiliares);
             this.Controls.Add(this.label40);
             this.Controls.Add(this.txtSalario);
             this.Controls.Add(this.txtIngreso);
@@ -1199,8 +1199,8 @@
         public System.Windows.Forms.TextBox txtIngreso;
         public System.Windows.Forms.TextBox txtSalario;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label lblFamiliares;
+        private System.Windows.Forms.Label lblPersona;
+        private System.Windows.Forms.Label lblAcademicos;
     }
 }

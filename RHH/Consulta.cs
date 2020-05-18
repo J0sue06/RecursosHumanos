@@ -39,7 +39,10 @@ namespace RHH
         private void txtFiltro_TextChanged(object sender, EventArgs e)
         {
             FiltroConsulta();
-
+            if (string.IsNullOrEmpty(txtFiltro.Text))
+            {
+                dgListado.DataSource = _consulta.CargarLista();
+            }
 
         }
 
@@ -113,6 +116,8 @@ namespace RHH
             dgListado.Columns[25].Visible = false;
             dgListado.Columns[54].Visible = false;
             dgListado.Columns[53].Visible = false;
+            dgListado.Columns[24].Visible = false;
+            dgListado.Columns[56].Visible = false;
         }
 
         private void dgListado_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -131,17 +136,17 @@ namespace RHH
             _info.txtSexoInfo.Text = dgListado.CurrentRow.Cells[23].Value.ToString();
             _info.txtCorreoInfo.Text = dgListado.CurrentRow.Cells[5].Value.ToString();
             _info.txtEstudiosInfo.Text = dgListado.CurrentRow.Cells[6].Value.ToString();
-            _info.txtGradoInfo.Text = dgListado.CurrentRow.Cells[34].Value.ToString();
-            _info.txtIdiomaInfo.Text = dgListado.CurrentRow.Cells[35].Value.ToString();
-            _info.txtNombrePinfo.Text = dgListado.CurrentRow.Cells[38].Value.ToString();
-            _info.txtNombreMinfo.Text = dgListado.CurrentRow.Cells[41].Value.ToString();
+            _info.txtGradoInfo.Text = dgListado.CurrentRow.Cells[35].Value.ToString();
+            _info.txtIdiomaInfo.Text = dgListado.CurrentRow.Cells[36].Value.ToString();
+            _info.txtNombrePinfo.Text = dgListado.CurrentRow.Cells[39].Value.ToString();
+            _info.txtNombreMinfo.Text = dgListado.CurrentRow.Cells[42].Value.ToString();
             _info.txtTelefonoCasa.Text = dgListado.CurrentRow.Cells[7].Value.ToString();
             _info.txtTelefonoMovil.Text = dgListado.CurrentRow.Cells[8].Value.ToString();
             _info.txtCondicion.Text = dgListado.CurrentRow.Cells[9].Value.ToString();
             _info.txtRango.Text = dgListado.CurrentRow.Cells[10].Value.ToString();
             _info.txtInstitucion.Text = dgListado.CurrentRow.Cells[11].Value.ToString();
-            _info.txtLugar.Text = dgListado.CurrentRow.Cells[32].Value.ToString();
-            _info.txtTermino.Text = dgListado.CurrentRow.Cells[33].Value.ToString();
+            _info.txtLugar.Text = dgListado.CurrentRow.Cells[33].Value.ToString();
+            _info.txtTermino.Text = dgListado.CurrentRow.Cells[34].Value.ToString();
             _info.txtIngreso.Text = dgListado.CurrentRow.Cells[12].Value.ToString();
             _info.txtUltimoAscenso.Text = dgListado.CurrentRow.Cells[13].Value.ToString();
             _info.txtAntecedentes.Text = dgListado.CurrentRow.Cells[14].Value.ToString();
@@ -152,18 +157,18 @@ namespace RHH
             _info.txtLicencia.Text = dgListado.CurrentRow.Cells[19].Value.ToString();
             _info.txtSangre.Text = dgListado.CurrentRow.Cells[20].Value.ToString();
             _info.txtDependiente.Text = dgListado.CurrentRow.Cells[21].Value.ToString();
-            _info.txtEstadoP.Text = dgListado.CurrentRow.Cells[39].Value.ToString();
-            _info.txtEstadoM.Text = dgListado.CurrentRow.Cells[42].Value.ToString();
-            _info.txtConyugue.Text = dgListado.CurrentRow.Cells[44].Value.ToString();
-            _info.txtTelConyugue.Text = dgListado.CurrentRow.Cells[45].Value.ToString();
-            _info.txtPersonaEm.Text = dgListado.CurrentRow.Cells[46].Value.ToString();
-            _info.txtParentesco.Text = dgListado.CurrentRow.Cells[47].Value.ToString();
-            _info.txtTelefonoEm.Text = dgListado.CurrentRow.Cells[48].Value.ToString();
-            _info.txtIdAcademicos.Text = dgListado.CurrentRow.Cells[29].Value.ToString();
-            _info.txtInstitucionAcademica.Text = dgListado.CurrentRow.Cells[31].Value.ToString();
-            _info.txtTelefonoPadre.Text = dgListado.CurrentRow.Cells[40].Value.ToString();
-            _info.txtTelefonoMadre.Text = dgListado.CurrentRow.Cells[43].Value.ToString();
-            _info.txtIdFamiliares.Text = dgListado.CurrentRow.Cells[37].Value.ToString();
+            _info.txtEstadoP.Text = dgListado.CurrentRow.Cells[40].Value.ToString();
+            _info.txtEstadoM.Text = dgListado.CurrentRow.Cells[43].Value.ToString();
+            _info.txtConyugue.Text = dgListado.CurrentRow.Cells[45].Value.ToString();
+            _info.txtTelConyugue.Text = dgListado.CurrentRow.Cells[46].Value.ToString();
+            _info.txtPersonaEm.Text = dgListado.CurrentRow.Cells[47].Value.ToString();
+            _info.txtParentesco.Text = dgListado.CurrentRow.Cells[48].Value.ToString();
+            _info.txtTelefonoEm.Text = dgListado.CurrentRow.Cells[49].Value.ToString();
+            _info.txtIdAcademicos.Text = dgListado.CurrentRow.Cells[30].Value.ToString();
+            _info.txtInstitucionAcademica.Text = dgListado.CurrentRow.Cells[32].Value.ToString();
+            _info.txtTelefonoPadre.Text = dgListado.CurrentRow.Cells[41].Value.ToString();
+            _info.txtTelefonoMadre.Text = dgListado.CurrentRow.Cells[44].Value.ToString();
+            _info.txtIdFamiliares.Text = dgListado.CurrentRow.Cells[38].Value.ToString();
             _info.txtSalario.Text = dgListado.CurrentRow.Cells[27].Value.ToString();
 
             var foto = dgListado.CurrentRow.Cells[22].Value;
@@ -180,12 +185,18 @@ namespace RHH
 
         private void Consulta_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+            this.Hide();
+            new Inicio().Show();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             
+        }
+
+        private void dgListado_DataSourceChanged(object sender, EventArgs e)
+        {
+            //dgListado.DataSource = _consulta.CargarLista();
         }
     }
 }

@@ -72,6 +72,10 @@ namespace RHH
             txtID.Visible = false;
             txtIdAcademicos.Visible = false;
             txtIdFamiliares.Visible = false;
+            lblAcademicos.Visible = false;
+            lblFamiliares.Visible = false;
+            lblPersona.Visible = false;
+
 
         }
 

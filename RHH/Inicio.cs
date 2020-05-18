@@ -105,17 +105,41 @@ namespace RHH
 
         private void nuevoDepartamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new NuevoDepartamento().Show();
+            if (Acceso.Admin != "Si")
+            {
+                MessageBox.Show("No tienes acceso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                new NuevoDepartamento().Show();
+            }
+            
         }
 
         private void nuevaAreaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new NuevaArea().Show();
+            if (Acceso.Admin != "Si")
+            {
+                MessageBox.Show("No tienes acceso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                new NuevaArea().Show();
+            }
+            
         }
 
         private void nuevaDireccionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new DireccionDGV().Show();
+            if (Acceso.Admin != "Si")
+            {
+                MessageBox.Show("No tienes acceso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                new DireccionDGV().Show();
+            }
+            
         }
     }
 }
