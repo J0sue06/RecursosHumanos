@@ -90,7 +90,7 @@ namespace RHH {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_departamento {
+        public CrystalDecisions.Shared.IParameterField Parameter_codigo {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }

@@ -1,4 +1,4 @@
---Version 4.0
+--Version 4.8
 
 Nuevas funciones:
 
@@ -14,6 +14,8 @@ Nuevas funciones:
 * La forma de obtener los datos dependiendo 
 de lo seleccionado en el area de departamento, area y direccion
 * Reorganizacion de el formulario de registro
+* Reportes desde otra maquina con el runtime
+* Correcion a la hora de imprimir reporte, pedia la clave
 
 - Se agrego:
 

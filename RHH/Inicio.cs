@@ -68,17 +68,7 @@ namespace RHH
 
         private void Inicio_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Hide();
-            DialogResult opcion = MessageBox.Show("¿Estas seguro de realizar esta accion?", "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if(opcion == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-            else if (opcion == DialogResult.No)
-            {
-                new Inicio().Show();
-            }
+            Application.Exit();
         }
 
         private void reporteDeMasDeUnaPersonaToolStripMenuItem_Click(object sender, EventArgs e)

@@ -23,6 +23,7 @@ namespace RHH
         {
 
             ReporteRH _reporte = new ReporteRH();
+            _reporte.SetDatabaseLogon("adminp", "Abcd1234", "192.168.90.94", "recursos_humanos2");
             _reporte.SetParameterValue("@cedula", txtFiltro.Text);            
             Reporte reporte = new Reporte();
             

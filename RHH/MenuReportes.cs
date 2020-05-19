@@ -77,6 +77,7 @@ namespace RHH
             if (chkDepartamento.Checked == true && Fecha.Checked == true)
             {
                 ReporteRHVariasP2 _reporte = new ReporteRHVariasP2();
+                _reporte.SetDatabaseLogon("adminp", "Abcd1234", "192.168.90.94", "recursos_humanos2");
                 _reporte.SetParameterValue("@codigo", ComboDepartamento.SelectedValue);
                 _reporte.SetParameterValue("@fecha1", Desde.Text);
                 _reporte.SetParameterValue("@fecha2", Hasta.Text);
@@ -91,7 +92,8 @@ namespace RHH
                 if (chkDepartamento.Checked == true)
                 {
                     ReporteRHVariasP _reporte = new ReporteRHVariasP();
-                    _reporte.SetParameterValue("@departamento", ComboDepartamento.SelectedValue);
+                    _reporte.SetDatabaseLogon("adminp", "Abcd1234", "192.168.90.94", "recursos_humanos2");
+                    _reporte.SetParameterValue("@codigo", ComboDepartamento.SelectedValue);
                     _reporte.SetParameterValue("@fecha1", null);
                     _reporte.SetParameterValue("@fecha2", null);
                     Reporte reporte = new Reporte();
@@ -103,7 +105,8 @@ namespace RHH
                 if (Fecha.Checked == true)
                 {
                     ReporteRHVariasP _reporte = new ReporteRHVariasP();
-                    _reporte.SetParameterValue("@departamento", null);
+                    _reporte.SetDatabaseLogon("adminp", "Abcd1234", "192.168.90.94", "recursos_humanos2");
+                    _reporte.SetParameterValue("@codigo", null);
                     _reporte.SetParameterValue("@fecha1", Desde.Text);
                     _reporte.SetParameterValue("@fecha2", Hasta.Text);
                     Reporte reporte = new Reporte();

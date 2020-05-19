@@ -11,11 +11,10 @@ namespace ClassLibrary1.Conexion
     public class BasedeDatos
     {
         public SqlConnection con = new SqlConnection();
-        string cadena = "Data Source=TEC007\\EXPRESS; Initial Catalog = recursos_humanos2; Integrated Security=true;";
+        string cadena = "Data Source=192.168.90.94; Initial Catalog = recursos_humanos2; User ID=adminp; Password=Abcd1234;";
 
         public SqlConnection conectar()
-        {
-            //con = new SqlConnection("Data Source=.; Initial Catalog = recursos_humanos; Integrated Security=true;");
+        {            
             con.ConnectionString = cadena;
             return con;
         }

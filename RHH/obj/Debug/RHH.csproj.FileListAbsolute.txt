@@ -361,3 +361,17 @@ C:\Users\c5iadmin\Desktop\4.1\RHH\obj\Debug\RHH.csproj.CoreCompileInputs.cache
 C:\Users\c5iadmin\Desktop\4.1\RHH\obj\Debug\RHH.csproj.CopyComplete
 C:\Users\c5iadmin\Desktop\4.1\RHH\obj\Debug\RHH.exe
 C:\Users\c5iadmin\Desktop\4.1\RHH\obj\Debug\RHH.pdb
+C:\Users\c5iadmin\Desktop\4.1\RHH\bin\Debug\RHH.exe.manifest
+C:\Users\c5iadmin\Desktop\4.1\RHH\bin\Debug\RHH.application
+C:\Users\c5iadmin\Desktop\4.1\RHH\obj\Debug\RHH.exe.manifest
+C:\Users\c5iadmin\Desktop\4.1\RHH\obj\Debug\RHH.application
+C:\Users\c5iadmin\Desktop\4.1\RHH\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\c5iadmin\Desktop\4.1\RHH\bin\Debug\SqlServerTypes\x64\msvcr100.dll
+C:\Users\c5iadmin\Desktop\4.1\RHH\bin\Debug\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\Users\c5iadmin\Desktop\4.1\RHH\bin\Debug\SqlServerTypes\x86\msvcr100.dll
+C:\Users\c5iadmin\Desktop\4.1\RHH\bin\Debug\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\Users\c5iadmin\Desktop\4.1\RHH\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\c5iadmin\Desktop\4.1\RHH\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\c5iadmin\Desktop\4.1\RHH\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\c5iadmin\Desktop\4.1\RHH\bin\Debug\ClassLibrary1.dll.config
+C:\Users\c5iadmin\Desktop\4.1\RHH\bin\Debug\Microsoft.ReportViewer.WinForms.dll
