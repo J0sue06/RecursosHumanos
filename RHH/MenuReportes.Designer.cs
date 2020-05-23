@@ -46,7 +46,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(244, 22);
+            this.label1.Location = new System.Drawing.Point(359, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(215, 25);
             this.label1.TabIndex = 0;
@@ -93,7 +93,7 @@
             this.ComboDepartamento.FormattingEnabled = true;
             this.ComboDepartamento.Location = new System.Drawing.Point(634, 138);
             this.ComboDepartamento.Name = "ComboDepartamento";
-            this.ComboDepartamento.Size = new System.Drawing.Size(99, 21);
+            this.ComboDepartamento.Size = new System.Drawing.Size(207, 21);
             this.ComboDepartamento.TabIndex = 5;
             // 
             // label4
@@ -148,7 +148,7 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(222, 181);
+            this.button1.Location = new System.Drawing.Point(313, 181);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(291, 53);
             this.button1.TabIndex = 8;
@@ -160,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(756, 246);
+            this.ClientSize = new System.Drawing.Size(853, 246);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);

@@ -43,6 +43,7 @@ namespace RHH
             Modificar.Enabled = false;
             Eliminar.Enabled = false;
             Administrador.Enabled = false;
+            Reportes.Enabled = false;
         }
 
         private void Activar()
@@ -57,6 +58,7 @@ namespace RHH
             Modificar.Enabled = true;
             Eliminar.Enabled = true;
             Administrador.Enabled = true;
+            Reportes.Enabled = true;
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -119,6 +121,14 @@ namespace RHH
             else
             {
                 _usuariosModel.Administrador = "No";
+            }
+            if (Reportes.Checked == true)
+            {
+                _usuariosModel.Reporte = "Si";
+            }
+            else
+            {
+                _usuariosModel.Reporte = "No";
             }
 
             var resultado = _usuariosModel.ActualizarUsuario();

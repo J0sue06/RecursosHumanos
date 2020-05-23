@@ -41,6 +41,7 @@ namespace RHH
                     Acceso.Modificar = reader["modificar"].ToString();
                     Acceso.Eliminar = reader["eliminar"].ToString();
                     Acceso.Admin = reader["admi"].ToString();
+                    Acceso.Reporte = reader["reportes"].ToString();
                 Resultado = 1;
                 }             
                         

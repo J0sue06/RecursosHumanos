@@ -21,6 +21,7 @@ namespace ClassLibrary1.Modelo
         public string Registrar { get; set; }
         public string Modificar { get; set; }
         public string Eliminar { get; set; }
+        public string Reporte { get; set; }
         public string Administrador { get; set; }
 
         public int Resultado { get; set; }
@@ -44,6 +45,7 @@ namespace ClassLibrary1.Modelo
                 cmd.Parameters.Add(new SqlParameter("@modificar", Modificar));
                 cmd.Parameters.Add(new SqlParameter("@eliminar", Eliminar));
                 cmd.Parameters.Add(new SqlParameter("@admin", Administrador));
+                cmd.Parameters.Add(new SqlParameter("@reporte", Reporte));
 
                 con.Close();
                 con.Open();
@@ -81,7 +83,8 @@ namespace ClassLibrary1.Modelo
                 cmd.Parameters.Add(new SqlParameter("@registrar", Registrar));
                 cmd.Parameters.Add(new SqlParameter("@modificar", Modificar));
                 cmd.Parameters.Add(new SqlParameter("@eliminar", Eliminar));
-                cmd.Parameters.Add(new SqlParameter("@admin", Eliminar));
+                cmd.Parameters.Add(new SqlParameter("@admin", Administrador));
+                cmd.Parameters.Add(new SqlParameter("@reporte", Reporte));
 
                 con.Close();
                 con.Open();

@@ -14,7 +14,7 @@ namespace RHH
     public partial class DireccionDGV : Form
     {      
 
-        NuevaDireccion d = new NuevaDireccion();
+        NuevoDepartamento d = new NuevoDepartamento();
         public DireccionDGV()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace RHH
         private void dgvArea_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             Departamento.Id_direccion = int.Parse(dgvDireccion.CurrentRow.Cells[0].Value.ToString());
-            d.txtDepartamento.Text = dgvDireccion.CurrentRow.Cells[2].Value.ToString();
+            d.txtDepartamento.Text = dgvDireccion.CurrentRow.Cells[1].Value.ToString();
             d.Show();           
             this.Close();
         }
@@ -31,8 +31,8 @@ namespace RHH
         private void DireccionDGV_Load(object sender, EventArgs e)
         {
             dgvDireccion.DataSource = new Departamento().DatosDireccion();
-            dgvDireccion.Columns[0].Visible = false;
-            dgvDireccion.Columns[1].Visible = false;
+            //dgvDireccion.Columns[0].Visible = false;
+            //dgvDireccion.Columns[1].Visible = false;
         }
     }
 }

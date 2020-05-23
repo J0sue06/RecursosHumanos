@@ -24,14 +24,19 @@ namespace RHH
             dgvArea.DataSource = new Departamento().DatosArea();
             dgvArea.Columns[0].Visible = false;
             dgvArea.Columns[1].Visible = false;
+            dgvArea.Columns[4].Visible = false;
+            dgvArea.Columns[2].Visible = false;
+            dgvArea.Columns[3].Visible = false;
+            dgvArea.Columns[7].Visible = false;
         }
 
         private void dgvArea_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {             
-            contrato2.Area(dgvArea.CurrentRow.Cells[2].Value.ToString());
+            contrato2.Area(dgvArea.CurrentRow.Cells[5].Value.ToString());
 
-            PersonaModel.CodigoArea = dgvArea.CurrentRow.Cells[3].Value.ToString();
-            Departamento.Id_direccion = int.Parse(dgvArea.CurrentRow.Cells[0].Value.ToString());
+            PersonaModel.CodigoArea = dgvArea.CurrentRow.Cells[6].Value.ToString();
+            PersonaModel.CodigoDivision = dgvArea.CurrentRow.Cells[2].Value.ToString();
+            //Departamento.Id_direccion = int.Parse(dgvArea.CurrentRow.Cells[0].Value.ToString());
         }
     }
 }

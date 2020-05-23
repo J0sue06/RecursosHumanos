@@ -75,6 +75,8 @@ namespace RHH
             lblAcademicos.Visible = false;
             lblFamiliares.Visible = false;
             lblPersona.Visible = false;
+            txtPuesto.Enabled = false;
+            txtSalario.Enabled = false;
 
 
         }
@@ -120,7 +122,8 @@ namespace RHH
             txtSangre.Enabled = true;
             txtNumCasa.Enabled = true;
             txtUltimoAscenso.Enabled = true;
-            
+            txtPuesto.Enabled = true;
+            txtSalario.Enabled = true;
 
         }
 
@@ -292,6 +295,7 @@ namespace RHH
             _personaModel.Antecedentes = txtAntecedentes.Text;
             _personaModel.numeroCasa = txtNumCasa.Text;
             _personaModel.Salario = txtSalario.Text;
+            _personaModel.Puesto = txtPuesto.Text;
 
             //Guardar Imagen -----------------------
             System.IO.MemoryStream ms = new System.IO.MemoryStream();
@@ -348,11 +352,11 @@ namespace RHH
         {
             if (Acceso.Eliminar == "Si")
             {
-                DialogResult result = MessageBox.Show("¿Realmente desea eliminar este registro?", "Atencion", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("¿Realmente desea dar debaja este registro?", "Atencion", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
                     _personaModel.Eliminar(int.Parse(txtID.Text));
-                    MessageBox.Show("Eliminado Correctamente!", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Proceso completado Correctamente!", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     this.Hide();
                     new Consulta().Show();
                 }

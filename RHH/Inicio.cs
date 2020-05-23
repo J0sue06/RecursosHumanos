@@ -41,7 +41,7 @@ namespace RHH
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
         }
 
         private void configuracionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -58,7 +58,15 @@ namespace RHH
 
         private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new HacerReporte().Show();
+            if (Acceso.Reporte != "Si")
+            {
+                MessageBox.Show("No tienes acceso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                new HacerReporte().Show();
+            }
+            
         }
 
         private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -68,12 +76,20 @@ namespace RHH
 
         private void Inicio_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
         }
 
         private void reporteDeMasDeUnaPersonaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new MenuReportes().Show();
+            if (Acceso.Reporte != "Si")
+            {
+                MessageBox.Show("No tienes acceso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                new MenuReportes().Show();
+            }
+            
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -101,7 +117,7 @@ namespace RHH
             }
             else
             {
-                new NuevoDepartamento().Show();
+                new _NuevaDireccion().Show();
             }
             
         }
@@ -128,6 +144,59 @@ namespace RHH
             else
             {
                 new DireccionDGV().Show();
+            }
+            
+        }
+
+        private void nuevaDireccionToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (Acceso.Admin != "Si")
+            {
+                MessageBox.Show("No tienes acceso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                new _NuevaDireccion().Show();
+            }
+            
+        }
+
+        private void nuevoDepartamentoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (Acceso.Admin != "Si")
+            {
+                MessageBox.Show("No tienes acceso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                new DireccionDGV().Show();
+            }
+
+            
+        }
+
+        private void nuevaDivisionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Acceso.Admin != "Si")
+            {
+                MessageBox.Show("No tienes acceso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                new _NuevaDivision().Show();
+            }
+            
+        }
+
+        private void nuevaAreaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (Acceso.Admin != "Si")
+            {
+                MessageBox.Show("No tienes acceso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                new NuevaArea().Show();
             }
             
         }

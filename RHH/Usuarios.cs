@@ -59,6 +59,7 @@ namespace RHH
             string Modificar = dgvUsuarios.CurrentRow.Cells[8].Value.ToString();
             string Eliminar = dgvUsuarios.CurrentRow.Cells[9].Value.ToString();
             string Admin = dgvUsuarios.CurrentRow.Cells[10].Value.ToString();
+            string Reporte = dgvUsuarios.CurrentRow.Cells[11].Value.ToString();
 
             if (Consultar == "Si")
             {
@@ -95,6 +96,14 @@ namespace RHH
             else
             {
                 _infoUsuarios.Administrador.Checked = false;
+            }
+            if (Reporte == "Si")
+            {
+                _infoUsuarios.Reportes.Checked = true;
+            }
+            else
+            {
+                _infoUsuarios.Reportes.Checked = false;
             }
 
             this.Hide();

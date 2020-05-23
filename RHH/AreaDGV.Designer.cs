@@ -39,9 +39,9 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(150, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 22);
+            this.label1.Size = new System.Drawing.Size(185, 22);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Selecione el area";
+            this.label1.Text = "Selecione el puesto";
             // 
             // dgvArea
             // 
@@ -68,7 +68,7 @@
             this.MinimizeBox = false;
             this.Name = "AreaDGV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AreaDGV";
+            this.Text = "Seleccionar el puesto de trabajo";
             this.Load += new System.EventHandler(this.AreaDGV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArea)).EndInit();
             this.ResumeLayout(false);

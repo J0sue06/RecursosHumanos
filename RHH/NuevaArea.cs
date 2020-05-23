@@ -20,16 +20,15 @@ namespace RHH
 
         private void NuevaArea_Load(object sender, EventArgs e)
         {
-            dgvDepartamento.DataSource = new Departamento().DatosDepartamento();
+            dgvDepartamento.DataSource = new Departamento().DatosDivision();
             //dgvDepartamento.Columns[0].Visible = false;
         }
 
         private void dgvDepartamento_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             NuevaAreaForm area = new NuevaAreaForm();
-            area.txtDepartamento.Text = dgvDepartamento.CurrentRow.Cells[2].Value.ToString();
-            Departamento.Id_area = int.Parse(dgvDepartamento.CurrentRow.Cells[0].Value.ToString());
-            Departamento.Id_direccion = int.Parse(dgvDepartamento.CurrentRow.Cells[0].Value.ToString());
+            area.txtDepartamento.Text = dgvDepartamento.CurrentRow.Cells[3].Value.ToString();
+            Departamento.Id_division = int.Parse(dgvDepartamento.CurrentRow.Cells[0].Value.ToString());            
             area.Show();
             this.Close();
         }

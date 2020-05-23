@@ -51,7 +51,7 @@ namespace RHH
                     codigo = letra + Convert.ToString(contador);
                 }
 
-                r = d.NuevaArea(new object[] { item.Cells[0].Value, codigo });
+                r = d.InsertarDatosArea(new object[] { item.Cells[0].Value, codigo });
 
                 contador++;
 

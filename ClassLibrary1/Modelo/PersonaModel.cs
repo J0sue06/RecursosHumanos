@@ -11,11 +11,12 @@ namespace ClassLibrary1.Modelo
 {
     public class PersonaModel
     {
-        public int IdUsuario { get; set; }
+        public int IdUsuario { get; set; }        
         public static int Id_departamento { get; set; }
         public static string CodigoDepartamento { get; set; }
         public static string CodigoArea { get; set; }
         public static string CodigoDireccion { get; set; }
+        public static string CodigoDivision { get; set; }
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
@@ -40,6 +41,7 @@ namespace ClassLibrary1.Modelo
         public string Antecedentes { get; set; }
         public string Sangre { get; set; }
         public string Salario { get; set; }
+        public string Puesto { get; set; }
         public int Estado = 0;
         public byte[] Imagen { get; set; }
         public int Resultado { get; set; }
@@ -48,7 +50,7 @@ namespace ClassLibrary1.Modelo
 
         public void InsertarPersona()
         {
-            string Codigo_final = CodigoDepartamento + CodigoArea + CodigoDireccion;
+            string Codigo_final = CodigoDireccion + CodigoDepartamento + CodigoDivision + CodigoArea;
             try
             {                
                 SqlCommand cmd = new SqlCommand("SP_insertar_informacionPersona", con);
@@ -83,6 +85,7 @@ namespace ClassLibrary1.Modelo
 
                 cmd.Parameters.Add(new SqlParameter("@salario", Salario));
                 cmd.Parameters.Add(new SqlParameter("@estado", Estado));
+                cmd.Parameters.Add(new SqlParameter("@puesto", Puesto));
 
                 con.Close();
                 con.Open();
@@ -178,6 +181,7 @@ namespace ClassLibrary1.Modelo
                 cmd.Parameters.Add(new SqlParameter("@sangre", Sangre));                
                 cmd.Parameters.Add("@imagen", SqlDbType.Image).Value = Imagen;
                 cmd.Parameters.Add(new SqlParameter("@salario", Salario));
+                cmd.Parameters.Add(new SqlParameter("@puesto", Puesto));
 
                 con.Close();
                 con.Open();

@@ -11,7 +11,8 @@ namespace ClassLibrary1.Conexion
     public class BasedeDatos
     {
         public SqlConnection con = new SqlConnection();
-        string cadena = "Data Source=192.168.90.94; Initial Catalog = recursos_humanos2; User ID=adminp; Password=Abcd1234;";
+        //string cadena = "Data Source=192.168.90.94; Initial Catalog = recursos_humanos2; Integrated Security=true;";
+        string cadena = "Data Source=192.168.93.37; Initial Catalog = recursos_humanos; uid=adminp; password=M@ster123";
 
         public SqlConnection conectar()
         {            

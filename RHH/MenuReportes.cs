@@ -22,7 +22,7 @@ namespace RHH
         {
             DataTable dtdpto = new DataTable();
             Departamento dpto = new Departamento();
-            dtdpto = dpto.DatosDepartamento();
+            dtdpto = dpto.DatosDepartamento2();
 
             ComboDepartamento.DataSource = dtdpto;
             ComboDepartamento.DisplayMember = "NombreDepartamento";
@@ -77,7 +77,7 @@ namespace RHH
             if (chkDepartamento.Checked == true && Fecha.Checked == true)
             {
                 ReporteRHVariasP2 _reporte = new ReporteRHVariasP2();
-                _reporte.SetDatabaseLogon("adminp", "Abcd1234", "192.168.90.94", "recursos_humanos2");
+                _reporte.SetDatabaseLogon("adminp", "M@ster123", "192.168.93.37", "recursos_humanos");
                 _reporte.SetParameterValue("@codigo", ComboDepartamento.SelectedValue);
                 _reporte.SetParameterValue("@fecha1", Desde.Text);
                 _reporte.SetParameterValue("@fecha2", Hasta.Text);
@@ -92,7 +92,8 @@ namespace RHH
                 if (chkDepartamento.Checked == true)
                 {
                     ReporteRHVariasP _reporte = new ReporteRHVariasP();
-                    _reporte.SetDatabaseLogon("adminp", "Abcd1234", "192.168.90.94", "recursos_humanos2");
+                    _reporte.SetDatabaseLogon("adminp", "M@ster123", "192.168.93.37", "recursos_humanos");
+                    //_reporte.SetDatabaseLogon("adminp","Abcd1234");
                     _reporte.SetParameterValue("@codigo", ComboDepartamento.SelectedValue);
                     _reporte.SetParameterValue("@fecha1", null);
                     _reporte.SetParameterValue("@fecha2", null);
@@ -105,7 +106,7 @@ namespace RHH
                 if (Fecha.Checked == true)
                 {
                     ReporteRHVariasP _reporte = new ReporteRHVariasP();
-                    _reporte.SetDatabaseLogon("adminp", "Abcd1234", "192.168.90.94", "recursos_humanos2");
+                    _reporte.SetDatabaseLogon("adminp", "M@ster123", "192.168.93.37", "recursos_humanos");
                     _reporte.SetParameterValue("@codigo", null);
                     _reporte.SetParameterValue("@fecha1", Desde.Text);
                     _reporte.SetParameterValue("@fecha2", Hasta.Text);

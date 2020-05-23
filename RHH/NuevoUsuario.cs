@@ -71,7 +71,11 @@ namespace RHH
                 _usuarios.Administrador = "Si";
             }
             else { _usuarios.Administrador = "No"; }
-
+            if (Reportes.Checked == true)
+            {
+                _usuarios.Reporte = "Si";
+            }
+            else { _usuarios.Reporte = "No"; }
 
             return  Validar();
             

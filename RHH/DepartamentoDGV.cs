@@ -23,6 +23,10 @@ namespace RHH
         {            
             dgvDepartamento.DataSource = new Departamento().DatosDepartamento();
             dgvDepartamento.Columns[0].Visible = false;
+            dgvDepartamento.Columns[1].Visible = false;
+            dgvDepartamento.Columns[2].Visible = false;
+            dgvDepartamento.Columns[3].Visible = false;
+            dgvDepartamento.Columns[6].Visible = false;
         }
 
         private void dgvDepartamento_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -32,13 +36,14 @@ namespace RHH
 
         private void dgvDepartamento_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            contrato.Departamento(dgvDepartamento.CurrentRow.Cells[2].Value.ToString());         
+            contrato.Departamento(dgvDepartamento.CurrentRow.Cells[4].Value.ToString());
 
-            Departamento.id_departamento = int.Parse(dgvDepartamento.CurrentRow.Cells[0].Value.ToString());
+            Departamento.id_departamento = int.Parse(dgvDepartamento.CurrentRow.Cells[3].Value.ToString());
 
-            PersonaModel.Id_departamento = int.Parse(dgvDepartamento.CurrentRow.Cells[0].Value.ToString());
+            PersonaModel.Id_departamento = int.Parse(dgvDepartamento.CurrentRow.Cells[3].Value.ToString());
 
-            PersonaModel.CodigoDepartamento = dgvDepartamento.CurrentRow.Cells[1].Value.ToString();
+            PersonaModel.CodigoDepartamento = dgvDepartamento.CurrentRow.Cells[5].Value.ToString();
+            PersonaModel.CodigoDireccion = dgvDepartamento.CurrentRow.Cells[2].Value.ToString();
 
 
         }

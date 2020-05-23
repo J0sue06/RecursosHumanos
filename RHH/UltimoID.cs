@@ -44,6 +44,37 @@ namespace RHH
 
 
         }
+        public bool ObtenerUltimoIdDepartamento()
+        {
+            try
+            {
+                con.Close();
+                con.Open();
+                SqlDataReader reader = null;
+
+                SqlCommand cmd = new SqlCommand("SP_ultimoCodigoDepartamento", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    NuevoDepartamento.UltimoNumero = int.Parse(reader["codigo"].ToString());
+
+                }
+
+                con.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                con.Close();
+                return false;
+
+            }
+
+
+        }
 
         public bool ObtenerUltimoIdDireccion()
         {
@@ -60,7 +91,39 @@ namespace RHH
 
                 while (reader.Read())
                 {
-                    NuevaDireccion.UltimoNumero = int.Parse(reader["codigo"].ToString());
+                    NuevoDepartamento.UltimoNumero = int.Parse(reader["codigo"].ToString());
+
+                }
+
+                con.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                con.Close();
+                return false;
+
+            }
+
+
+        }
+
+        public bool ObtenerUltimoIdDivision()
+        {
+            try
+            {
+                con.Close();
+                con.Open();
+                SqlDataReader reader = null;
+
+                SqlCommand cmd = new SqlCommand("SP_ultimoCodigoDivision", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    NuevaDivision.UltimoNumero = int.Parse(reader["codigo"].ToString());
 
                 }
 

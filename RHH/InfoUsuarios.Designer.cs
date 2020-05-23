@@ -31,6 +31,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Administrador = new System.Windows.Forms.CheckBox();
             this.Eliminar = new System.Windows.Forms.CheckBox();
             this.Modificar = new System.Windows.Forms.CheckBox();
             this.Registrar = new System.Windows.Forms.CheckBox();
@@ -48,7 +49,7 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtIdUsuarios = new System.Windows.Forms.TextBox();
             this.txtCedula = new System.Windows.Forms.MaskedTextBox();
-            this.Administrador = new System.Windows.Forms.CheckBox();
+            this.Reportes = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +68,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(122, 35);
+            this.label6.Location = new System.Drawing.Point(122, 21);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(300, 30);
             this.label6.TabIndex = 26;
@@ -75,18 +76,30 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.Reportes);
             this.groupBox1.Controls.Add(this.Administrador);
             this.groupBox1.Controls.Add(this.Eliminar);
             this.groupBox1.Controls.Add(this.Modificar);
             this.groupBox1.Controls.Add(this.Registrar);
             this.groupBox1.Controls.Add(this.Consultar);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(343, 92);
+            this.groupBox1.Location = new System.Drawing.Point(343, 68);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(181, 150);
+            this.groupBox1.Size = new System.Drawing.Size(181, 174);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Permisos";
+            // 
+            // Administrador
+            // 
+            this.Administrador.AutoSize = true;
+            this.Administrador.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Administrador.Location = new System.Drawing.Point(6, 144);
+            this.Administrador.Name = "Administrador";
+            this.Administrador.Size = new System.Drawing.Size(128, 24);
+            this.Administrador.TabIndex = 13;
+            this.Administrador.Text = "Administrador";
+            this.Administrador.UseVisualStyleBackColor = true;
             // 
             // Eliminar
             // 
@@ -256,16 +269,16 @@
             this.txtCedula.Size = new System.Drawing.Size(186, 23);
             this.txtCedula.TabIndex = 30;
             // 
-            // Administrador
+            // Reportes
             // 
-            this.Administrador.AutoSize = true;
-            this.Administrador.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Administrador.Location = new System.Drawing.Point(6, 120);
-            this.Administrador.Name = "Administrador";
-            this.Administrador.Size = new System.Drawing.Size(128, 24);
-            this.Administrador.TabIndex = 13;
-            this.Administrador.Text = "Administrador";
-            this.Administrador.UseVisualStyleBackColor = true;
+            this.Reportes.AutoSize = true;
+            this.Reportes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reportes.Location = new System.Drawing.Point(6, 118);
+            this.Reportes.Name = "Reportes";
+            this.Reportes.Size = new System.Drawing.Size(93, 24);
+            this.Reportes.TabIndex = 17;
+            this.Reportes.Text = "Reportes";
+            this.Reportes.UseVisualStyleBackColor = true;
             // 
             // InfoUsuarios
             // 
@@ -324,5 +337,6 @@
         public System.Windows.Forms.TextBox txtIdUsuarios;
         public System.Windows.Forms.MaskedTextBox txtCedula;
         public System.Windows.Forms.CheckBox Administrador;
+        public System.Windows.Forms.CheckBox Reportes;
     }
 }

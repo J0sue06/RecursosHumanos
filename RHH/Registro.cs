@@ -11,7 +11,7 @@ using ClassLibrary1.Modelo;
 
 namespace RHH
 {
-    public partial class Registro : Form, Contrato,Contrato2,Contrato3
+    public partial class Registro : Form, Contrato,Contrato2
     {
         PersonaModel _personasModel = new PersonaModel();
         DatosAcademicos _datosAcademicos = new DatosAcademicos();
@@ -62,9 +62,10 @@ namespace RHH
             _personasModel.Estudios = cEstudios.Text;
             _personasModel.Telefono_Casa = txtTelCasa.Text;
             _personasModel.Telefono_Movil = txtTelMovil.Text;
-            _personasModel.Dependiente = txtDependiente.Text;
+            _personasModel.Dependiente = txtDependiente1.Text;
             _personasModel.Sexo = txtSexo.Text;
             _personasModel.Salario = txtSalario.Text;
+            _personasModel.Puesto = cArea.Text;
 
             if (txtCondicion.Text == "Civil")
             {
@@ -119,33 +120,36 @@ namespace RHH
             this.Hide();
         }
 
-        private void validarAcademicos()
+        private bool validarAcademicos()
         {
             if (txtEstudios.Text == string.Empty)
             {
                 MessageBox.Show("El campo nivel academico es necesario!", "Completar los campos con *", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             else if (string.IsNullOrEmpty(txtColegio.Text))
             {
                 MessageBox.Show("El campo institucion es necesario!", "Completar los campos con *", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             else if (string.IsNullOrEmpty(txtLugar.Text))
             {
-                
+                MessageBox.Show("El campo lugar es necesario!", "Completar los campos con *", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             else if (string.IsNullOrEmpty(txtTitulo.Text))
             {
                 MessageBox.Show("El campo titulo o grado es necesario!", "Completar los campos con *", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             else if (string.IsNullOrEmpty(txtIdiomas.Text))
             {
                 MessageBox.Show("El campo idioma es necesario!", "Completar los campos con *", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             else
-            {
-                
-                _datosAcademicos.InsertarDatosAcademicos();
-                tabControl1.SelectedTab = tabPage1;
+            {  
+                return true;
             }
         }
 
@@ -252,9 +256,15 @@ namespace RHH
             _datosAcademicos.Titulo = txtTitulo.Text;
             _datosAcademicos.Idioma = txtIdiomas.Text;
 
-            validarAcademicos();
+            if (validarAcademicos())
+            {
+                _datosAcademicos.InsertarDatosAcademicos();
+                tabControl1.SelectedTab = tabPage1;                
+            }            
 
         }
+
+    
 
         private void LicenciaNo_Click(object sender, EventArgs e)
         {
@@ -918,7 +928,7 @@ namespace RHH
 
         private void Registro_Load(object sender, EventArgs e)
         {
-            
+            cArea.Enabled = false;
         }
 
         private void cDepartamento_Click(object sender, EventArgs e)
@@ -930,7 +940,14 @@ namespace RHH
 
         private void cDepartamento_TextChanged(object sender, EventArgs e)
         {
-            
+            if(!string.IsNullOrEmpty(cDepartamento.Text))
+            {
+                cArea.Enabled = true;
+            }
+            else
+            {
+                cArea.Enabled = false;
+            }
         }
 
         public void Departamento(string texto)
@@ -941,10 +958,7 @@ namespace RHH
         {
             cArea.Text = texto;
         }
-        public void Direccion(string texto)
-        {
-            txtDireccion.Text = texto;
-        }
+       
 
         private void cArea_MouseClick(object sender, MouseEventArgs e)
         {
@@ -960,14 +974,28 @@ namespace RHH
 
         private void txtDireccion_MouseClick(object sender, MouseEventArgs e)
         {
-            Datos_Direccion d = new Datos_Direccion();
-            d.contrato3 = this;
-            d.Show();
+            
         }
 
         private void cArea_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void AntecedentesSi_CheckedChanged(object sender, EventArgs e)
+        {
+            if(AntecedentesNo.Checked == true)
+            {
+                AntecedentesNo.Checked = false;
+            }
+        }
+
+        private void AntecedentesNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (AntecedentesSi.Checked == true)
+            {
+                AntecedentesSi.Checked = false;
+            }
         }
     }
 

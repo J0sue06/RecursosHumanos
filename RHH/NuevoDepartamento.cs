@@ -13,52 +13,56 @@ namespace RHH
 {
     public partial class NuevoDepartamento : Form
     {
+        public static int UltimoNumero { get; set; }
+
         Departamento d = new Departamento();
         public NuevoDepartamento()
         {
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Departamento.NombreDepartamento = txtDepartamento.Text;
-            
-            var resultado = d.InsertarDatosDepartamento();
-
-            if (resultado == "OK")
-            {
-                d.ObtenerIdDepartamento();
-
-                var r = false;
-                string letra = "0";
-                int contador = 1;
-                string codigo;
-                
-
-                foreach (DataGridViewRow item in dgvArea.Rows)
-                {
-                    codigo = letra + Convert.ToString(contador);                 
-  
-                    r = d.InsertarDatosArea(new object[] { item.Cells[0].Value, codigo });                    
-                    
-                    contador++;
-                  
-                }
-
-                 if(r == true)
-                {
-                    MessageBox.Show("Departamento Creado Satisfactoriamente!","Atencion",MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    this.Hide();
-                }
-            }
-
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            dgvArea.Rows.Add(txtArea.Text);
-            txtArea.Clear();            
+            dgvDepartamento.Rows.Add(txtDireccion.Text);
+            txtDireccion.Clear();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UltimoID _ultimoID = new UltimoID();
+
+            _ultimoID.ObtenerUltimoIdDepartamento();
+
+            var r = false;
+            string letra = "0";
+            int contador = UltimoNumero + 1;
+            string codigo;
+
+            foreach (DataGridViewRow item in dgvDepartamento.Rows)
+            {
+                if (contador >= 10)
+                    codigo = Convert.ToString(contador);
+                else
+                {
+                    codigo = letra + Convert.ToString(contador);
+                }
+
+                r = d.InsertarDatosDepartamento(new object[] { item.Cells[0].Value });
+
+                contador++;
+
+            }
+
+            if (r == true)
+            {
+                MessageBox.Show("Direcciones Agregadas Correctamente!", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                this.Close();
+            }
+        }
+
+        private void NuevaDireccion_Load(object sender, EventArgs e)
+        {
+            txtDepartamento.Enabled = false;
         }
     }
 }

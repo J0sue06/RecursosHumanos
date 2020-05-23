@@ -15,5 +15,6 @@ namespace RHH
         public static string Modificar { get; set; }
         public static string Eliminar { get; set; }
         public static string Admin { get; set; }
+        public static string Reporte { get; set; }
     }
 }

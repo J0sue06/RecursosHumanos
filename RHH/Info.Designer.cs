@@ -128,6 +128,8 @@
             this.lblFamiliares = new System.Windows.Forms.Label();
             this.lblPersona = new System.Windows.Forms.Label();
             this.lblAcademicos = new System.Windows.Forms.Label();
+            this.txtPuesto = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pImagenInfo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -461,7 +463,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(1022, 252);
+            this.label17.Location = new System.Drawing.Point(1018, 248);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(75, 13);
             this.label17.TabIndex = 40;
@@ -909,7 +911,7 @@
             // 
             this.btnG.BackColor = System.Drawing.Color.LawnGreen;
             this.btnG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnG.Location = new System.Drawing.Point(1131, 523);
+            this.btnG.Location = new System.Drawing.Point(1116, 485);
             this.btnG.Name = "btnG";
             this.btnG.Size = new System.Drawing.Size(121, 32);
             this.btnG.TabIndex = 67;
@@ -963,7 +965,7 @@
             // 
             // txtIngreso
             // 
-            this.txtIngreso.Location = new System.Drawing.Point(1103, 249);
+            this.txtIngreso.Location = new System.Drawing.Point(1099, 245);
             this.txtIngreso.Name = "txtIngreso";
             this.txtIngreso.Size = new System.Drawing.Size(100, 20);
             this.txtIngreso.TabIndex = 74;
@@ -1011,11 +1013,29 @@
             this.lblAcademicos.TabIndex = 79;
             this.lblAcademicos.Text = "Academicos";
             // 
+            // txtPuesto
+            // 
+            this.txtPuesto.Location = new System.Drawing.Point(1099, 275);
+            this.txtPuesto.Name = "txtPuesto";
+            this.txtPuesto.Size = new System.Drawing.Size(100, 20);
+            this.txtPuesto.TabIndex = 81;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(1053, 278);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(40, 13);
+            this.label41.TabIndex = 80;
+            this.label41.Text = "Puesto";
+            // 
             // Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1270, 594);
+            this.Controls.Add(this.txtPuesto);
+            this.Controls.Add(this.label41);
             this.Controls.Add(this.lblAcademicos);
             this.Controls.Add(this.lblPersona);
             this.Controls.Add(this.lblFamiliares);
@@ -1202,5 +1222,7 @@
         private System.Windows.Forms.Label lblFamiliares;
         private System.Windows.Forms.Label lblPersona;
         private System.Windows.Forms.Label lblAcademicos;
+        public System.Windows.Forms.TextBox txtPuesto;
+        private System.Windows.Forms.Label label41;
     }
 }

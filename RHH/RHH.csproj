@@ -7,13 +7,13 @@
     <ProjectGuid>{84928FD3-6EE4-4F4A-8E01-3B9346B45CB7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>RHH</RootNamespace>
-    <AssemblyName>RHH</AssemblyName>
+    <AssemblyName>RHH Instalador</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\c5iadmin\Desktop\Prueba Publicacion\</PublishUrl>
+    <PublishUrl>C:\Users\c5iadmin\Desktop\Prueba de Instalador\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationRevision>15</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -63,6 +63,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>logoc5i.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
@@ -117,11 +120,17 @@
     <Compile Include="Contrato.cs" />
     <Compile Include="Contrato2.cs" />
     <Compile Include="Contrato3.cs" />
-    <Compile Include="Datos Direccion.cs">
+    <Compile Include="NuevaDivision.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Datos Direccion.Designer.cs">
-      <DependentUpon>Datos Direccion.cs</DependentUpon>
+    <Compile Include="NuevaDivision.Designer.cs">
+      <DependentUpon>NuevaDivision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_NuevaDivision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_NuevaDivision.Designer.cs">
+      <DependentUpon>_NuevaDivision.cs</DependentUpon>
     </Compile>
     <Compile Include="DepartamentoDGV.cs">
       <SubType>Form</SubType>
@@ -185,17 +194,17 @@
     <Compile Include="NuevaAreaForm.Designer.cs">
       <DependentUpon>NuevaAreaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NuevaDireccion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NuevaDireccion.Designer.cs">
-      <DependentUpon>NuevaDireccion.cs</DependentUpon>
-    </Compile>
     <Compile Include="NuevoDepartamento.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NuevoDepartamento.Designer.cs">
       <DependentUpon>NuevoDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_NuevaDireccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_NuevaDireccion.Designer.cs">
+      <DependentUpon>_NuevaDireccion.cs</DependentUpon>
     </Compile>
     <Compile Include="NuevoUsuario.cs">
       <SubType>Form</SubType>
@@ -249,8 +258,11 @@
     <EmbeddedResource Include="Consulta.resx">
       <DependentUpon>Consulta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Datos Direccion.resx">
-      <DependentUpon>Datos Direccion.cs</DependentUpon>
+    <EmbeddedResource Include="NuevaDivision.resx">
+      <DependentUpon>NuevaDivision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_NuevaDivision.resx">
+      <DependentUpon>_NuevaDivision.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DepartamentoDGV.resx">
       <DependentUpon>DepartamentoDGV.cs</DependentUpon>
@@ -282,11 +294,11 @@
     <EmbeddedResource Include="NuevaAreaForm.resx">
       <DependentUpon>NuevaAreaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NuevaDireccion.resx">
-      <DependentUpon>NuevaDireccion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="NuevoDepartamento.resx">
       <DependentUpon>NuevoDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_NuevaDireccion.resx">
+      <DependentUpon>_NuevaDireccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
@@ -728,20 +740,10 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
-      <Visible>False</Visible>
-      <ProductName>SAP Crystal Reports Runtime Engine for .NET Framework</ProductName>
-      <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
